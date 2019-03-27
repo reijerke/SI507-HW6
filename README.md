@@ -113,9 +113,11 @@ White, which is the default color.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
-The gray boxes from code written in the `<style>` tag, which is CSS. I edited background-color in the paragraph (`<p>` tag) using a code for light blue from https://www.w3schools.com/colors/colors_picker.asp. 
+The gray boxes from code written in the `<style>` tag, which is CSS. I edited background-color in the paragraph (`<p>` tag) using a code for light blue from https://www.w3schools.com/colors/colors_picker.asp.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+
+I noticed when you copied `Univeristy of Michigan` on the webpage the words `Go Blue!` appear. So I changed the phrase `Go Blue!` in `function copyFunction()` to say `O Canada` and also moved the line `oncopy="copyFunction()"`inside the `<li>` tag for `McGill University`.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -130,11 +132,10 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
+Line 132 says that when the button with the id `wow-button` is clicked it invokes the function `handleClick`. `handleClick` then displays in a pop-up the word `hello`.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
-
-
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
 
@@ -142,19 +143,49 @@ function handleClick(){
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
+This is because of the `if...else` statement in lines 20-26 which reference the `<style>` tags in lines 7-13. The element with `class="error"` is styled under the `<style>` tag as `red` and element with `class="good"` is styled as `blue`.
+
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+
+The line `var regex = /^[a-zA-Z]+$/;` helps improve performance because the literal pattern is only compiled once in the JavaScript code (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+
+I googled `/^[a-zA-Z]+$/` and learned that it is a regular expression in JavaScript that is defined by character encoding like in cataloging (e.g. the `/` marks the beginning and end of the expression, if `^` is before or after the `[]` it means something different, etc.). I also learned that the `a-zA-z` is saying make sure the text is the letters A-Z. The capital and lowercase letters ensure the expression catches the variant spelling; in programming a different case is considered a different variable altogether.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
+In python there is `elif` but in JavaScript you use `else if` to indicate if the first thing I said wasn't true then do this thing. The formatting is also a little different. The if/else in python is indented on the same line of code and there is a colon after the conditional statement. In python you would construct an if/else statement like this:
+
+```
+	if (condition):
+		//block of code if true
+	else:
+		//block of code if false
+```
+
+In JavaScript the code uses `{}` to indicate what comes after is the code if true/false and the `else {}` line is not flush with the `if {}` line. In JavaScript the code would look like this:
+
+```
+	if (condition) {
+		//block of code if true
+	} else {
+		//block of code if false
+	}
+```
+
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
+This refers to how quickly the text in the console disappears once the function is executed. The higher the number the quicker it disappears (https://www.w3schools.com/jquery/eff_fadeout.asp).  
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
-```js
+
+```
+js
 $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
+The `$(document).ready()` is a jQuery `event method` that lets you execute the function only after the document (the entire webpage you created) is loaded. In the next line `$("form").submit()` means when I submit a form do this. The function inside `submit()` I think then means then do this thing to my submitted form. I'm not sure what `event` is for. Maybe it's what action should happen? Like this thing I call event should happen when I submit a form. 
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
