@@ -58,8 +58,8 @@ Below are a bunch of questions and indications of things to do. For each indicat
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
 * **Dana Reijerkerk (reijerke)**
-* Zinnia Khan(zinniak)
-* Madel Leal(madeleal)
+* Zinnia Khan (zinniak)
+* Madel Leal (madeleal)
 
 ## Questions & code instructions
 
