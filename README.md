@@ -76,9 +76,10 @@ Some JavaScript code
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
 
-Comments begin with two // symbols.
+Comments begin with two // symbols. It looks like this:
 
-```//
+```
+//
 ```
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
@@ -185,7 +186,7 @@ $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
-The `$(document).ready()` is a jQuery `event method` that lets you execute the function only after the document (the entire webpage you created) is loaded. In the next line `$("form").submit()` means when I submit a form do this. The function inside `submit()` I think then means then do this thing to my submitted form. I'm not sure what `event` is for. Maybe it's what action should happen? Like this thing I call event should happen when I submit a form. 
+The `$(document).ready()` is a jQuery `event method` that lets you execute the function only after the document (the entire webpage you created) is loaded. In the next line `$("form").submit()` means when I submit a form do this. The function inside `submit()` I think then means then do this thing to my submitted form. I'm not sure what `event` is for. Maybe it's what action should happen? Like this thing I call event should happen when I submit a form.
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
