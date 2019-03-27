@@ -84,7 +84,7 @@ Comments begin with two // symbols. It looks like this:
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
 
-The <script> tag tells the browser you are running javascript code (HTML Dog https://www.htmldog.com/guides/javascript/beginner/makingstuffhappen/). To run the entire program you open it in your browser (I just click on the file and it does so automatically).
+The <script> tag tells the browser you are running JavaScript code (Citing from https://www.htmldog.com/guides/javascript/beginner/makingstuffhappen/). To run the entire program you open it in your browser (I just click on the file and it does so automatically).
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
 
@@ -100,7 +100,7 @@ I changed line 17 that said `document.querySelector('h1').innerHTML = "A name";`
 
 * **What does the word `document` represent in this code? Explain briefly.**
 
-Document represents the webpage and allows me to access the elements on the page (https://www.w3schools.com/js/js_htmldom_document.asp).
+Document represents the webpage and allows me to access the elements on the page (Citing from https://www.w3schools.com/js/js_htmldom_document.asp).
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
@@ -133,7 +133,7 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
-Line 132 says that when the button with the id `wow-button` is clicked it invokes the function `handleClick`. `handleClick` then displays in a pop-up the word `hello`.
+`button onclick=handleClick() id="wow-button">Wow</button>` says that when the button with the id `wow-button` is clicked it invokes the function `handleClick`. `function handleClick(){alert("hello")}` is indicating that when the function called `handleClick()` is invoked the web page displays `hello` in a pop-up window.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
